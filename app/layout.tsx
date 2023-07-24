@@ -1,5 +1,7 @@
+import Footer from "@/components/common/Footer";
 import "./globals.css";
 import type { Metadata } from "next";
+import Header from "@/components/common/Header";
 
 //FIXME: SEO 활용 나중에 활용해보자
 export const metadata: Metadata = {
@@ -15,13 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header className="flex items-center justify-center h-16 bg-blue-400">
-          헤더
-        </header>
+        <Header />
         {children}
-        <footer className="flex items-center justify-center h-16 bg-blue-400">
-          푸터
-        </footer>
+        <Footer />
       </body>
     </html>
   );
