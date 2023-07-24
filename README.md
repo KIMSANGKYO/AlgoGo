@@ -1,34 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 프로젝트 설명
 
-## Getting Started
+- 백준, 프로그래머스와 같은 알고리즘 문제 풀이 사이트를 좀 더 편의성 있도록 만들어보자
 
-First, run the development server:
+- 점수, 랭크 시스템 도입
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- 회원제 도입
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 업적이나 뱃지, 도전과제 시스템 도입
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+\*\* 문제, 커뮤니티 시스템, 컨셉은 추후 추가 예정
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 코드 컨벤션
 
-## Learn More
+1. 들여쓰기 지키기! ( 프리티어가 알아서 해준다 )
 
-To learn more about Next.js, take a look at the following resources:
+2. ESLint 사용
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. 네이밍 규칙
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- 변수, 함수명은 기본적으로 소문자 시작해서 카멜 케이스로
 
-## Deploy on Vercel
+- 컴포넌트 명은 대문자로 시작하는 파스칼 케이스로
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 한번에 알아볼 수 있도록 일관성있고 가독성 좋게 기능을 명확하게 표현하자
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- 이벤트 핸들러 함수들은 앞에 handle 붙이기
+
+4. any 스크립트 금지 !
+
+5. 연산자 사용 시, 가독성을 위해 한 칸씩 공백 주기
+
+6. 하나의 함수가 너무 길어지지 않도록 최적의 알고리즘 코드로 !
+
+7. 공통적으로 쓰이는 기능이나 디자인은 컴포넌트 파일로 모아두거나 폴더에 모아두고 임포트하기
+
+## 커밋 컨벤션
+
+🎉 start : 프로젝트 시작
+
+✨ func : 기능 추가
+
+💄 design : 디자인 추가
+
+🐛 bug : 버그 발생 // 버그를 가진 코드 커밋했을 때
+
+🔨 fix : 버그, 코드 수정 시 // 오류를 완전히 고쳤을 때
+
+⚰️ del : 불필요코드 삭제 시
+
+♻️ refact : 리팩토링 작업 시
+
+📝 docs : 단순 문서 변경 커밋
+
+🍻 stupid : 정신 놓은 상태에서 커밋했을 때 // 문제 발생할 수 있으니 이걸로 넣어놓고 나중에 다시 보라는 의미
