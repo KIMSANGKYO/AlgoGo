@@ -1,11 +1,11 @@
 import React from "react";
 
-const AlgoList = () => {
+const Rank = () => {
   return (
     <main className="flex flex-col items-center min-h-screen p-24">
-      알고리즘 목록
+      랭크 페이지
     </main>
   );
 };
 
-export default AlgoList;
+export default Rank;

@@ -1,11 +1,11 @@
 import React from "react";
 
-const AlgoList = () => {
+const Travel = () => {
   return (
     <main className="flex flex-col items-center min-h-screen p-24">
-      알고리즘 목록
+      여행 페이지
     </main>
   );
 };
 
-export default AlgoList;
+export default Travel;
