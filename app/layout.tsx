@@ -14,7 +14,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <header className="flex items-center justify-center h-16 bg-blue-400">
+          헤더
+        </header>
+        {children}
+        <footer className="flex items-center justify-center h-16 bg-blue-400">
+          푸터
+        </footer>
+      </body>
     </html>
   );
 }
