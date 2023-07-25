@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center min-h-screen p-24">
+    <main>
       <Link href="/algolist">알고리즘 목록</Link>
       <Link href="/community">커뮤니티</Link>
       <Link href="/rank">랭크</Link>
