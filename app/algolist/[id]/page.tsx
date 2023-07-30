@@ -1,7 +1,23 @@
 import React from "react";
+import prisma from "@/lib/prisma";
 
-const Problem = () => {
-  return <main>Problem</main>;
+async function getProblems() {
+  const pro = await prisma.problem.findMany();
+  return pro;
+}
+
+const ProblemList = async () => {
+  const problem = await getProblems();
+
+  return (
+    <main>
+      <div>
+        {problem.map((e) => (
+          <div>{e.title}</div>
+        ))}
+      </div>
+    </main>
+  );
 };
 
-export default Problem;
+export default ProblemList;
