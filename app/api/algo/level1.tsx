@@ -7,8 +7,10 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const problems = await prisma.problem.findMany();
   if (req.method === "GET") {
-    res.status(200).json(problems);
+    const problems = await prisma.problem.findMany();
+    res.json({ ok: true, problems });
   }
 }
+
+// problems api
