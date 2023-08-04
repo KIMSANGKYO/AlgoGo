@@ -9,9 +9,12 @@ async function getProblems() {
   return problems;
 }
 
-const ProblemList = async () => {
-  const problems = await getProblems();
+type PageParams = {
+  id: number;
+};
 
+const ProblemList = async ({ params }: { params: PageParams }) => {
+  const problems = await getProblems();
   return (
     <main>
       <div>
@@ -19,6 +22,7 @@ const ProblemList = async () => {
           <NormalProblem key={problem.id} problem={problem} />
         ))}
       </div>
+      <div>{Number(params.id)}</div>
     </main>
   );
 };

@@ -15,7 +15,7 @@ const NormalProblem = ({ problem }: { problem: Problem }) => {
       <div className="flex flex-col">
         <div>{problem.title}</div>
         <div>{problem.description}</div>
-        <div>{JSON.parse(problem.testcase).input}</div>
+        <div>{problem.testcase.input}</div>
       </div>
     </div>
   );
