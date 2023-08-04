@@ -1,27 +1,25 @@
 import React from "react";
 import prisma from "@/lib/prisma";
 import NormalProblem from "@/components/algolist/NormalProblem";
-import { Prisma } from "@prisma/client";
-
-async function getProblems() {
-  const problems = await prisma.problem.findMany();
-
-  return problems;
-}
 
 type PageParams = {
   id: number;
 };
 
 const ProblemList = async ({ params }: { params: PageParams }) => {
-  const problems = await getProblems();
+  const problem = await prisma.problem.findUnique({
+    where: {
+      id: Number(params.id),
+    },
+  });
+
   return (
     <main>
-      <div>
-        {problems.map((problem) => (
-          <NormalProblem key={problem.id} problem={problem} />
-        ))}
-      </div>
+      {problem ? (
+        <NormalProblem problem={problem} />
+      ) : (
+        <div>데이터안받아짐</div>
+      )}
       <div>{Number(params.id)}</div>
     </main>
   );
@@ -29,4 +27,5 @@ const ProblemList = async ({ params }: { params: PageParams }) => {
 
 export default ProblemList;
 
-// 문제를 푸는 페이지
+// 문제 푸는 페이지
+// 파람스 받아오기 테스트
