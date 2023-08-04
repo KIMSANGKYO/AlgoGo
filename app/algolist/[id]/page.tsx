@@ -1,6 +1,6 @@
 import prisma from "@/lib/prisma";
 import NormalProblem from "@/components/algolist/NormalProblem";
-import ProblemBox from "@/components/algolist/ProblemBox";
+import Parents from "@/components/algolist/Parents";
 
 type PageParams = {
   id: number;
@@ -14,8 +14,8 @@ const ProblemList = async ({ params }: { params: PageParams }) => {
   });
 
   return (
-    <div className="flex justify-around min-h-screen p-4 bg-myWhite">
-      <section className="flex-1 p-4 overflow-auto resize-x">
+    <div className="relative flex justify-around min-h-screen p-4 bg-myWhite">
+      {/* <section className="flex-1 p-4 overflow-auto resize-x">
         {problem ? (
           <NormalProblem problem={problem} />
         ) : (
@@ -28,8 +28,9 @@ const ProblemList = async ({ params }: { params: PageParams }) => {
       ></div>
       <section className="flex-1 p-4 overflow-auto resize-x">
         코드 작성 컴포넌트
-        <ProblemBox />
-      </section>
+        {problem ? <Parents problem={problem} /> : <div>dd</div>}
+      </section> */}
+      {problem ? <Parents problem={problem} /> : <div>dd</div>}
     </div>
   );
 };
