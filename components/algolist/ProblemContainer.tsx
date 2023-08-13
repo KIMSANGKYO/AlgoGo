@@ -10,7 +10,7 @@ type Problem = {
   difficulty: number;
 };
 
-const Parents = ({ problem }: { problem: Problem }) => {
+const ProblemContainer = ({ problem }: { problem: Problem }) => {
   const [dragging, setDragging] = useState(false);
   const [leftWidth, setLeftWidth] = useState("50%");
 
@@ -68,9 +68,9 @@ const Parents = ({ problem }: { problem: Problem }) => {
           overflow: "auto",
         }}
       >
-        {/* 오른쪽 영역에 들어갈 내용 */}
+        오른쪽내용
       </section>
     </div>
   );
 };
-export default Parents;
+export default ProblemContainer;
