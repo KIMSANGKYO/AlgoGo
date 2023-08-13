@@ -11,6 +11,7 @@ type Problem = {
 };
 
 const ProblemContainer = ({ problem }: { problem: Problem }) => {
+  // 이분 드래그 기능
   const [dragging, setDragging] = useState(false);
   const [leftWidth, setLeftWidth] = useState("50%");
 

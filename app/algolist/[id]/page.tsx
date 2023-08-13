@@ -27,3 +27,4 @@ export default ProblemList;
 
 // 문제 푸는 페이지
 // 파람스 받아오기 테스트 => Number(params.id)
+//TODO: 데이터 안받아졌을 경우 오류 페이지 이동 >> url 로 없는 문제번호 접근시
