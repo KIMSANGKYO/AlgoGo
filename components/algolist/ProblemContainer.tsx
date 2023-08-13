@@ -33,12 +33,12 @@ const ProblemContainer = ({ problem }: { problem: Problem }) => {
 
   return (
     <div
-      className="relative flex border border-gray-300 h-44"
+      className="relative flex w-full border border-gray-300 h-80"
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
     >
       <section
-        className="overflow-auto"
+        className="p-2 overflow-auto"
         style={{
           width: leftWidth,
         }}
@@ -46,14 +46,13 @@ const ProblemContainer = ({ problem }: { problem: Problem }) => {
         <NormalProblem problem={problem} />
       </section>
       <div
-        className="absolute top-0 w-1 h-full bg-gray-300"
+        className="absolute top-0 w-1 h-full bg-gray-300 cursor-col-resize"
         style={{
-          cursor: dragging ? "col-resize" : "default",
           left: leftWidth,
         }}
         onMouseDown={handleMouseDown}
       />
-      <section className="flex-1 overflow-auto">오른쪽내용</section>
+      <section className="flex-1 p-2 overflow-auto">오른쪽 내용</section>
     </div>
   );
 };

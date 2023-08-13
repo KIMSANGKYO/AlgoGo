@@ -13,7 +13,7 @@ const ProblemList = async ({ params }: { params: PageParams }) => {
   });
 
   return (
-    <div className="relative flex justify-around min-h-screen p-4 bg-myWhite">
+    <div className="flex justify-around min-h-screen p-4 bg-myWhite">
       {problem ? (
         <ProblemContainer problem={problem} />
       ) : (
