@@ -19,7 +19,11 @@ const AlgoList = async () => {
           <ul className="flex flex-col border border-blue-600">
             <div>상태바 라인</div>
             {problems.map((problem) => (
-              <Link href={`/algolist/${problem.id}`} key={problem.id}>
+              <Link
+                href={`/algolist/${problem.id}`}
+                key={problem.id}
+                className="p-4"
+              >
                 {problem.title}
               </Link>
             ))}
@@ -41,3 +45,5 @@ const AlgoList = async () => {
 };
 
 export default AlgoList;
+
+//FIXME: 드롭다운에 맞춰 데이터정렬 필요 >> 표형태로 레이아웃 재설정
