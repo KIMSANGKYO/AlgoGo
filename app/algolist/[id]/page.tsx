@@ -30,7 +30,7 @@ const ProblemList = async ({ params }: { params: PageParams }) => {
         코드 작성 컴포넌트
         {problem ? <Parents problem={problem} /> : <div>dd</div>}
       </section> */}
-      {problem ? <Parents problem={problem} /> : <div>dd</div>}
+      {problem ? <Parents problem={problem} /> : <div>데이터안받아짐</div>}
     </div>
   );
 };
