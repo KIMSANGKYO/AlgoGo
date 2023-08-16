@@ -1,4 +1,3 @@
-import { Prisma } from "@prisma/client";
 import React from "react";
 
 type Problem = {
@@ -16,6 +15,7 @@ const NormalProblem = ({ problem }: { problem: Problem }) => {
         <div>{problem.title}</div>
         <div>{problem.description}</div>
         <div>{problem.testcase.input}</div>
+        <div>{problem.testcase.output}</div>
       </div>
     </div>
   );
@@ -24,3 +24,4 @@ const NormalProblem = ({ problem }: { problem: Problem }) => {
 export default NormalProblem;
 
 // 문제 내용 컴포넌트
+//FIXME: 테스트 케이스 형태 바꾸기 [{},{}]
