@@ -18,6 +18,7 @@ const Header = () => {
         <Link href="/community">커뮤니티</Link>
         <Link href="/rank">랭크</Link>
         <li>유저 문제</li>
+        <Link href="/adminEdit">관리자 페이지</Link>
       </ul>
     </header>
   );
